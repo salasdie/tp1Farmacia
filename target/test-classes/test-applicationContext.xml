@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+						http://www.springframework.org/schema/tx
+						http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+    <import resource="classpath:test-hibernateContext.xml"/>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <bean id="farmaciaDao" class="ar.edu.unlam.tallerweb1.dao.Farmacia.FarmaciaDaoImpl"/>
+    <bean id="farmaciaDireccionDao" class="ar.edu.unlam.tallerweb1.dao.Farmacia.FarmaciaDireccionDao"/>
+    <bean id="farmaciaBarrioDao" class="ar.edu.unlam.tallerweb1.dao.Farmacia.FarmaciaBarrioDao"/>
+    <bean id="farmaciaComunaDao" class="ar.edu.unlam.tallerweb1.dao.Farmacia.FarmaciaComunaDao"/>
+    <bean id="farmaciaPuntoDao" class="ar.edu.unlam.tallerweb1.dao.Farmacia.FarmaciaPuntoDao"/>
+
+</beans>
+
